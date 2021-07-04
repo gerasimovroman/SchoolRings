@@ -1,0 +1,330 @@
+{
+  "Days": [
+    {
+      "DayOfWeek": 1,
+      "Lessons": [
+        {
+          "Name": "Урок 1",
+          "StartTime": "08:30:00",
+          "EndTime": "09:15:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 2",
+          "StartTime": "09:25:00",
+          "EndTime": "10:10:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 3",
+          "StartTime": "10:30:00",
+          "EndTime": "11:15:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 4",
+          "StartTime": "11:35:00",
+          "EndTime": "12:20:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 5",
+          "StartTime": "12:30:00",
+          "EndTime": "13:15:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 6",
+          "StartTime": "13:30:00",
+          "EndTime": "14:15:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 7",
+          "StartTime": "14:30:00",
+          "EndTime": "15:15:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        }
+      ]
+    },
+    {
+      "DayOfWeek": 2,
+      "Lessons": [
+        {
+          "Name": "Урок 1",
+          "StartTime": "08:30:00",
+          "EndTime": "09:15:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 2",
+          "StartTime": "09:25:00",
+          "EndTime": "10:10:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 3",
+          "StartTime": "10:30:00",
+          "EndTime": "11:15:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 4",
+          "StartTime": "11:35:00",
+          "EndTime": "12:20:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 5",
+          "StartTime": "12:30:00",
+          "EndTime": "13:15:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 6",
+          "StartTime": "13:30:00",
+          "EndTime": "14:15:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 7",
+          "StartTime": "14:30:00",
+          "EndTime": "15:15:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        }
+      ]
+    },
+    {
+      "DayOfWeek": 3,
+      "Lessons": [
+        {
+          "Name": "Урок 1",
+          "StartTime": "08:30:00",
+          "EndTime": "09:15:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 2",
+          "StartTime": "09:25:00",
+          "EndTime": "10:10:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 3",
+          "StartTime": "10:30:00",
+          "EndTime": "11:15:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 4",
+          "StartTime": "11:35:00",
+          "EndTime": "12:20:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 5",
+          "StartTime": "12:30:00",
+          "EndTime": "13:15:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 6",
+          "StartTime": "13:30:00",
+          "EndTime": "14:15:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 7",
+          "StartTime": "14:30:00",
+          "EndTime": "15:15:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        }
+      ]
+    },
+    {
+      "DayOfWeek": 4,
+      "Lessons": [
+        {
+          "Name": "Урок 1",
+          "StartTime": "08:30:00",
+          "EndTime": "09:15:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 2",
+          "StartTime": "09:25:00",
+          "EndTime": "10:10:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 3",
+          "StartTime": "10:30:00",
+          "EndTime": "11:15:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 4",
+          "StartTime": "11:35:00",
+          "EndTime": "12:20:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 5",
+          "StartTime": "12:30:00",
+          "EndTime": "13:15:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 6",
+          "StartTime": "13:30:00",
+          "EndTime": "14:15:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 7",
+          "StartTime": "14:30:00",
+          "EndTime": "15:15:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        }
+      ]
+    },
+    {
+      "DayOfWeek": 5,
+      "Lessons": [
+        {
+          "Name": "Урок 1",
+          "StartTime": "08:30:00",
+          "EndTime": "09:15:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 2",
+          "StartTime": "09:25:00",
+          "EndTime": "10:10:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 3",
+          "StartTime": "10:30:00",
+          "EndTime": "11:15:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 4",
+          "StartTime": "11:35:00",
+          "EndTime": "12:20:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 5",
+          "StartTime": "12:30:00",
+          "EndTime": "13:15:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 6",
+          "StartTime": "13:30:00",
+          "EndTime": "14:15:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 7",
+          "StartTime": "14:30:00",
+          "EndTime": "15:15:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        }
+      ]
+    },
+    {
+      "DayOfWeek": 6,
+      "Lessons": [
+        {
+          "Name": "Урок 1",
+          "StartTime": "08:30:00",
+          "EndTime": "09:15:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 2",
+          "StartTime": "09:25:00",
+          "EndTime": "10:10:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 3",
+          "StartTime": "10:30:00",
+          "EndTime": "11:15:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 4",
+          "StartTime": "11:35:00",
+          "EndTime": "12:20:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 5",
+          "StartTime": "12:30:00",
+          "EndTime": "13:15:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 6",
+          "StartTime": "13:30:00",
+          "EndTime": "14:15:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        },
+        {
+          "Name": "Урок 7",
+          "StartTime": "14:30:00",
+          "EndTime": "15:15:00",
+          "StartRingFileName": null,
+          "EndRingFileName": null
+        }
+      ]
+    }
+  ]
+}
+
+

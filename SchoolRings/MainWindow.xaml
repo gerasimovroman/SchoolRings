@@ -1,0 +1,161 @@
+﻿<mah:MetroWindow x:Class="SchoolRings.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                 xmlns:controls="clr-namespace:SchoolRings.Controls"
+                 xmlns:data="clr-namespace:SchoolRings.Data"
+                 Title="Расписание звонков" Height="730.5"
+                 Width="800" ResizeMode="CanMinimize"
+                 Name="Win">
+    <FrameworkElement.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="LessonDataTemplate">
+                <StackPanel Margin="0,10,0,0">
+                    <Grid>
+                        <Label Content="{Binding Name}" />
+                        <StackPanel Orientation="Horizontal" Margin="50,0,0,0">
+                            <mah:TimePicker SelectedTimeFormat="Short" Margin="0,0,10,0"
+                                            mah:TextBoxHelper.Watermark="Начало" SelectedTime="{Binding StartTime}" />
+                            <controls:FilePickerControl SelectedFile="{Binding StartRingFileName}" />
+                        </StackPanel>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                        <mah:TimePicker SelectedTimeFormat="Short" Margin="50,0,10,0"
+                                        mah:TextBoxHelper.Watermark="Начало" SelectedTime="{Binding EndTime}" />
+                        <controls:FilePickerControl SelectedFile="{Binding EndRingFileName}" />
+                    </StackPanel>
+                </StackPanel>
+            </DataTemplate>
+
+            <DataTemplate x:Key="DayDataTemplate" DataType="data:Day">
+                <StackPanel>
+                    <!--<StackPanel.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="Копировать" CommandParameter="{Binding}" Click="MenuItem_OnClick"></MenuItem>
+                            <MenuItem x:Name="RemoveDay" Header="Удалить" CommandParameter="{Binding}" Click="RemoveDay_OnClick"></MenuItem>
+                        </ContextMenu>
+                    </StackPanel.ContextMenu>-->
+                    <TextBlock FontSize="17" Text="{Binding Name}"></TextBlock>
+                </StackPanel>
+            </DataTemplate>
+
+            <Style x:Key="FocusVisual">
+                <Setter Property="Control.Template">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Rectangle Margin="2" SnapsToDevicePixels="True"
+                                       Stroke="{DynamicResource SystemColors.ControlTextBrushKey}" StrokeThickness="1"
+                                       StrokeDashArray="1 2" />
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <SolidColorBrush x:Key="Item.MouseOver.Background" Color="Transparent" />
+            <SolidColorBrush x:Key="Item.MouseOver.Border" Color="Transparent" />
+            <SolidColorBrush x:Key="Item.SelectedInactive.Background" Color="Transparent" />
+            <SolidColorBrush x:Key="Item.SelectedInactive.Border" Color="Transparent" />
+            <SolidColorBrush x:Key="Item.SelectedActive.Background" Color="Transparent" />
+            <SolidColorBrush x:Key="Item.SelectedActive.Border" Color="Transparent" />
+            <Style x:Key="ListBoxItemStyle" TargetType="{x:Type ListBoxItem}">
+                <Setter Property="UIElement.SnapsToDevicePixels" Value="True" />
+                <Setter Property="Padding" Value="4,1" />
+                <Setter Property="HorizontalContentAlignment"
+                        Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
+                <Setter Property="VerticalContentAlignment"
+                        Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
+                <Setter Property="Background" Value="#00FFFFFF" />
+                <Setter Property="BorderBrush" Value="#00FFFFFF" />
+                <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="FrameworkElement.FocusVisualStyle" Value="{StaticResource FocusVisual}" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                            <Border Name="Bd" BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}"
+                                    SnapsToDevicePixels="True">
+                                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <MultiTrigger>
+                                    <MultiTrigger.Conditions>
+                                        <Condition Property="UIElement.IsMouseOver" Value="True" />
+                                    </MultiTrigger.Conditions>
+                                    <Setter TargetName="Bd" Property="Border.Background"
+                                            Value="{StaticResource Item.MouseOver.Background}" />
+                                    <Setter TargetName="Bd" Property="Border.BorderBrush"
+                                            Value="{StaticResource Item.MouseOver.Border}" />
+                                </MultiTrigger>
+                                <MultiTrigger>
+                                    <MultiTrigger.Conditions>
+                                        <Condition Property="Selector.IsSelectionActive" Value="False" />
+                                        <Condition Property="ListBoxItem.IsSelected" Value="True" />
+                                    </MultiTrigger.Conditions>
+                                    <Setter TargetName="Bd" Property="Border.Background"
+                                            Value="{StaticResource Item.SelectedInactive.Background}" />
+                                    <Setter TargetName="Bd" Property="Border.BorderBrush"
+                                            Value="{StaticResource Item.SelectedInactive.Border}" />
+                                </MultiTrigger>
+                                <MultiTrigger>
+                                    <MultiTrigger.Conditions>
+                                        <Condition Property="Selector.IsSelectionActive" Value="True" />
+                                        <Condition Property="ListBoxItem.IsSelected" Value="True" />
+                                    </MultiTrigger.Conditions>
+                                    <Setter TargetName="Bd" Property="Border.Background"
+                                            Value="{StaticResource Item.SelectedActive.Background}" />
+                                    <Setter TargetName="Bd" Property="Border.BorderBrush"
+                                            Value="{StaticResource Item.SelectedActive.Border}" />
+                                </MultiTrigger>
+                                <Trigger Property="IsEnabled" Value="False">
+                                    <Setter TargetName="Bd" Value="{DynamicResource SystemColors.GrayTextBrushKey}"
+                                            Property="TextElement.Foreground" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </FrameworkElement.Resources>
+    <Grid>
+        <MediaElement Name="MediaElement" Volume="1" LoadedBehavior="Manual" UnloadedBehavior="Manual"
+                      Visibility="Collapsed" />
+        <TabControl>
+            <TabItem Header="Звонки">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="207*" />
+                        <ColumnDefinition Width="583*" />
+                    </Grid.ColumnDefinitions>
+
+
+                    <StackPanel Margin="10" Grid.Column="0">
+                        <ListBox SelectedIndex="0" Name="DaysListView" ItemTemplate="{DynamicResource DayDataTemplate}">
+                        </ListBox>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1" DataContext="{Binding ElementName=DaysListView, Path=SelectedItem}">
+                        <ComboBox Name="DayOfWeekComboBox" SelectedIndex="{Binding SelectedDayOfWeek}"></ComboBox>
+
+                        <ListBox Name="WeekDaysListBox" ItemsSource="{Binding Lessons}" ItemTemplate="{DynamicResource LessonDataTemplate}"
+                                 ItemContainerStyle="{DynamicResource ListBoxItemStyle}" />
+                    </StackPanel>
+
+                    <StackPanel  Grid.Column="1" 
+                                HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom"
+                                Orientation="Horizontal" Height="29" Width="211">
+
+
+                 
+                        <Button Name="Save" Click="Save_Click">Сохранить</Button>
+                        <Button Name="SaveAs" Margin="10,0,0,0" Click="SaveAs_Click">Сохранить как</Button>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Настройки">
+                <controls:Settings />
+            </TabItem>
+        </TabControl>
+    </Grid>
+</mah:MetroWindow>

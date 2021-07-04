@@ -1,0 +1,8 @@
+﻿<UserControl x:Class="SchoolRings.Controls.FilePickerControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:SchoolRings.Controls" x:Name="Control" Height="28.5" Width="100">
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <Button Click="ButtonBase_OnClick">...</Button>
+            <Label Margin="5,0,0,0" Content="{Binding SelectedFile, ElementName=Control}" />
+        </StackPanel>
+    </Grid>
+</UserControl>
